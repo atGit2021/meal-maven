@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,9 +13,8 @@ export default function Home() {
           height={380}
           priority
         />
-        <h1 className="text-4xl font-bold text-center text-purple-500">
-          Welcome to the Smart Pantry
-        </h1>
+        <h1>Meal Maven</h1>
+        <Link href="/about">About Meal Maven</Link>
       </main>
     </div>
   );

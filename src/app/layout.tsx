@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Smart Pantry",
-  description: "Next.js app for a digital pantry",
+  title: "Meal Maven",
+  description: "Your Kitchen Assistant",
 };
 
 export default function RootLayout({
