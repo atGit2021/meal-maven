@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Meal Maven",
-  description: "Your Kitchen Assistant",
+  title: "Foodiverse",
+  description: "A foodies paradise",
 };
 
 export default function RootLayout({
