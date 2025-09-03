@@ -32,17 +32,17 @@ export default function Header() {
             </Link>
           </h2>
           <h2>
-            <Link href="/contact" className="hover:text-purple-500">
+            <Link href="/supplies" className="hover:text-purple-500">
               Supplies
             </Link>
           </h2>
           <h2>
-            <Link href="/contact" className="hover:text-purple-500">
+            <Link href="/meals" className="hover:text-purple-500">
               Meals
             </Link>
           </h2>
           <h2>
-            <Link href="/contact" onClick={() => setMenuOpen(false)}>
+            <Link href="/stores" onClick={() => setMenuOpen(false)}>
               Stores
             </Link>
           </h2>
