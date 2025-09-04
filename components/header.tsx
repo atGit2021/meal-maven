@@ -9,40 +9,42 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full px-6 py-4 bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 z-50 sticky top-0 h-[60px]">
+    <header className="header-style">
       <div className="relative flex items-center justify-between h-full">
         {/* Left: Logo */}
-        <div className="flex items-center space-x-2 z-10">
-          <Link href="/" className="flex items-center space-x-2">
+        <div className="logo-container">
+          <Link href="/" className="flex items-center space-x-2 group">
             <Image src="/logo.png" alt="logo" width={40} height={40} />
-            <h1 className="text-xl font-bold text-purple-600">Foodiverse</h1>
+            <h1 className="text-xl font-bold text-purple-600 group-hover:text-purple-300">
+              Foodiverse
+            </h1>
           </Link>
         </div>
 
         {/* Center: Navigation (only on lg and up) */}
         <nav className="hidden lg:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 space-x-6 text-sm font-medium z-0">
           <h2>
-            <Link href="/about" className="hover:text-purple-500">
+            <Link href="/about" className="nav-link">
               About
             </Link>
           </h2>
           <h2>
-            <Link href="/recipes" className="hover:text-purple-500">
+            <Link href="/recipes" className="nav-link">
               Recipes
             </Link>
           </h2>
           <h2>
-            <Link href="/supplies" className="hover:text-purple-500">
+            <Link href="/supplies" className="nav-link">
               Supplies
             </Link>
           </h2>
           <h2>
-            <Link href="/meals" className="hover:text-purple-500">
+            <Link href="/meals" className="nav-link">
               Meals
             </Link>
           </h2>
           <h2>
-            <Link href="/stores" className="hover:text-purple-500">
+            <Link href="/stores" className="nav-link">
               Stores
             </Link>
           </h2>
@@ -62,30 +64,50 @@ export default function Header() {
 
       {/* Mobile Menu Dropdown (visible only on mobile when menu is open) */}
       {menuOpen && (
-        <div className="lg:hidden mt-2 bg-white dark:bg-black shadow-md py-4 px-6">
+        <div className="mobile-menu">
           <nav className="flex flex-col space-y-4 text-sm font-medium">
             <h2>
-              <Link href="/about" onClick={() => setMenuOpen(false)}>
+              <Link
+                href="/about"
+                onClick={() => setMenuOpen(false)}
+                className="nav-link"
+              >
                 About
               </Link>
             </h2>
             <h2>
-              <Link href="/recipes" onClick={() => setMenuOpen(false)}>
+              <Link
+                href="/recipes"
+                onClick={() => setMenuOpen(false)}
+                className="nav-link"
+              >
                 Recipes
               </Link>
             </h2>
             <h2>
-              <Link href="/supplies" onClick={() => setMenuOpen(false)}>
+              <Link
+                href="/supplies"
+                onClick={() => setMenuOpen(false)}
+                className="nav-link"
+              >
                 Supplies
               </Link>
             </h2>
             <h2>
-              <Link href="/meals" onClick={() => setMenuOpen(false)}>
+              <Link
+                href="/meals"
+                onClick={() => setMenuOpen(false)}
+                className="nav-link"
+              >
                 Meals
               </Link>
             </h2>
             <h2>
-              <Link href="/stores" onClick={() => setMenuOpen(false)}>
+              <Link
+                href="/stores"
+                onClick={() => setMenuOpen(false)}
+                className="nav-link"
+              >
                 Stores
               </Link>
             </h2>

@@ -12,16 +12,44 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h1 {
+    @apply text-4xl font-bold text-center text-purple-500;
+  }
+
+  h2 {
+    @apply text-2xl font-bold text-purple-500;
+  }
 }
 
-h1 {
-  @apply text-4xl font-bold text-center text-purple-500;
-}
+@layer components {
+  /* Header container */
+  .header-style {
+    @apply w-full px-6 py-4 bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 z-50 sticky top-0 h-[60px];
+  }
 
-h2 {
-  @apply text-2xl font-bold text-purple-500;
+  /* Logo styles */
+  .logo-container {
+    @apply flex items-center space-x-2 z-10;
+  }
+
+  /* Navigation links */
+  .nav-link {
+    @apply text-lg font-bold;
+  }
+
+  .nav-link:hover {
+    @apply text-purple-300;
+  }
+
+  /* Mobile Menu container */
+  .mobile-menu {
+    @apply lg:hidden mt-2 bg-white dark:bg-black shadow-md py-4 px-6;
+  }
 }
