@@ -42,7 +42,7 @@ export default function Header() {
             </Link>
           </h2>
           <h2>
-            <Link href="/stores" onClick={() => setMenuOpen(false)}>
+            <Link href="/stores" className="hover:text-purple-500">
               Stores
             </Link>
           </h2>
@@ -75,17 +75,17 @@ export default function Header() {
               </Link>
             </h2>
             <h2>
-              <Link href="/contact" onClick={() => setMenuOpen(false)}>
+              <Link href="/supplies" onClick={() => setMenuOpen(false)}>
                 Supplies
               </Link>
             </h2>
             <h2>
-              <Link href="/contact" onClick={() => setMenuOpen(false)}>
+              <Link href="/meals" onClick={() => setMenuOpen(false)}>
                 Meals
               </Link>
             </h2>
             <h2>
-              <Link href="/contact" onClick={() => setMenuOpen(false)}>
+              <Link href="/stores" onClick={() => setMenuOpen(false)}>
                 Stores
               </Link>
             </h2>
