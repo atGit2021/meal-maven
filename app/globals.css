@@ -41,7 +41,7 @@
 
   /* Navigation links */
   .nav-link {
-    @apply text-lg font-bold;
+    @apply text-lg font-semibold;
   }
 
   .nav-link:hover {
