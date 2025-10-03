@@ -4,9 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const path = usePathname();
+  const isActive = (href: string) => path.startsWith(href);
 
   return (
     <header className="header-style">
@@ -24,27 +27,56 @@ export default function Header() {
         {/* Center: Navigation (only on lg and up) */}
         <nav className="hidden lg:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 space-x-6 text-sm font-medium z-0">
           <h2>
-            <Link href="/about" className="nav-link">
+            <Link
+              href="/about"
+              className={`nav-link ${
+                isActive("/about") ? "text-purple-600 font-bold underline" : ""
+              }`}
+            >
               About
             </Link>
           </h2>
           <h2>
-            <Link href="/recipes" className="nav-link">
+            <Link
+              href="/recipes"
+              className={`nav-link ${
+                isActive("/recipes")
+                  ? "text-purple-600 font-bold underline"
+                  : ""
+              }`}
+            >
               Recipes
             </Link>
           </h2>
           <h2>
-            <Link href="/supplies" className="nav-link">
+            <Link
+              href="/supplies"
+              className={`nav-link ${
+                isActive("/supplies")
+                  ? "text-purple-600 font-bold underline"
+                  : ""
+              }`}
+            >
               Supplies
             </Link>
           </h2>
           <h2>
-            <Link href="/meals" className="nav-link">
+            <Link
+              href="/meals"
+              className={`nav-link ${
+                isActive("/meals") ? "text-purple-600 font-bold underline" : ""
+              }`}
+            >
               Meals
             </Link>
           </h2>
           <h2>
-            <Link href="/stores" className="nav-link">
+            <Link
+              href="/stores"
+              className={`nav-link ${
+                isActive("/stores") ? "text-purple-600 font-bold underline" : ""
+              }`}
+            >
               Stores
             </Link>
           </h2>
@@ -70,7 +102,11 @@ export default function Header() {
               <Link
                 href="/about"
                 onClick={() => setMenuOpen(false)}
-                className="nav-link"
+                className={`nav-link ${
+                  isActive("/about")
+                    ? "text-purple-600 font-bold underline"
+                    : ""
+                }`}
               >
                 About
               </Link>
@@ -79,7 +115,11 @@ export default function Header() {
               <Link
                 href="/recipes"
                 onClick={() => setMenuOpen(false)}
-                className="nav-link"
+                className={`nav-link ${
+                  isActive("/recipes")
+                    ? "text-purple-600 font-bold underline"
+                    : ""
+                }`}
               >
                 Recipes
               </Link>
@@ -88,7 +128,11 @@ export default function Header() {
               <Link
                 href="/supplies"
                 onClick={() => setMenuOpen(false)}
-                className="nav-link"
+                className={`nav-link ${
+                  isActive("/supplies")
+                    ? "text-purple-600 font-bold underline"
+                    : ""
+                }`}
               >
                 Supplies
               </Link>
@@ -97,7 +141,11 @@ export default function Header() {
               <Link
                 href="/meals"
                 onClick={() => setMenuOpen(false)}
-                className="nav-link"
+                className={`nav-link ${
+                  isActive("/meals")
+                    ? "text-purple-600 font-bold underline"
+                    : ""
+                }`}
               >
                 Meals
               </Link>
@@ -106,7 +154,11 @@ export default function Header() {
               <Link
                 href="/stores"
                 onClick={() => setMenuOpen(false)}
-                className="nav-link"
+                className={`nav-link ${
+                  isActive("/stores")
+                    ? "text-purple-600 font-bold underline"
+                    : ""
+                }`}
               >
                 Stores
               </Link>
